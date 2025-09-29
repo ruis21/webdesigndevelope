@@ -1,0 +1,253 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    background-color: white;
+}
+
+.wrap {
+    width: 1000px;
+    height: 650px;
+    display: flex;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+li {
+    list-style-type: none;
+}
+
+.header {
+    width: 200px;
+    height: 100%;
+    background-color: beige;
+    padding: 80px 0;
+}
+
+.logo a {
+    display: block;
+    width: 200px;
+    height: 40px;
+}
+
+.menu-list {
+    width: 160px;
+    margin: 40px auto 0;
+    text-align: center;
+}
+
+.menu>a {
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #333;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.menu:hover>a {
+    background-color: darkolivegreen;
+}
+
+.sub-menu>a {
+    display: block;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.sub-menu:hover>a {
+    background-color: peru;
+}
+
+/* 서브메뉴가 우측에 나타날때 */
+/* 아래 서브메뉴리스트 주석처리까지 풀어야 나타남 */
+
+/* .menu {
+    position: relative;
+} */
+
+.sub-menu-list {
+    /* position: absolute;
+    left: 160%;
+    top: 100%;
+    transform: translate(-60%, -50%); */
+    display: none;
+    /* width: 100%; */
+    background-color: white;
+    /* z-index: 5; */
+}
+
+.main-contents {
+    width: 800px;
+}
+
+.slide-sec {
+    width: 100%;
+    height: 350px;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.slide:first-child {
+    display: block;
+}
+
+/* contents sec  */
+.contents-wrap {
+    width: 100%;
+    height: 200px;
+    display: flex;
+}
+
+.contents-wrap h2 {
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+.notice-wrap {
+    width: 300px;
+    height: 100%;
+    padding: 5px;
+    /* background-color: blueviolet; */
+}
+
+.notice-list li a {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    letter-spacing: -0.5px;
+    gap: 7px;
+    padding: 5px 0;
+}
+
+.notice-list li a .date {
+    width: 95px;
+}
+
+.notice-list li a span:not(.date) {
+    flex: 1;
+}
+
+.gallery-wrap {
+    width: 250px;
+    height: 100%;
+    padding: 5px;
+}
+
+.gallery-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.gallery-list li a {
+    display: block;
+    width: 70px;
+}
+
+.gallery-list li img {
+    width: 100%;
+}
+
+.direct-wrap {
+    width: 250px;
+    height: 100%;
+    position: relative;
+}
+
+.direct-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.direct-wrap a {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: antiquewhite;
+    padding: 8px 10px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.copyright {
+    width: 600px;
+    text-align: center;
+}
+
+.footer-right {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+}
+
+.sns-list {
+    display: flex;
+}
+
+.family {
+    width: 100%;
+}
+
+
+.popup-wrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    display: none;
+}
+
+.popup {
+    width: 450px;
+    padding: 20px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close-btn {
+    padding: 5px 10px;
+    font-size: 16px;
+    float: right;
+}

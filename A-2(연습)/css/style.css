@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    background-color: white;
+    color: #333;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    z-index: 5;
+}
+
+.header .container {
+    background-color: chartreuse;
+
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.menu-list {
+    display: flex;
+    text-align: center;
+    background-color: #333;
+    color: white;
+}
+
+.menu {
+    position: relative;
+}
+
+.menu>a {
+    width: 150px;
+    padding: 10px 10px;
+    display: block;
+}
+
+.sub-menu-list {
+    position: absolute;
+    width: 100%;
+    display: none;
+    background-color: #333;
+}
+
+.menu:hover {
+    background-color: deeppink;
+}
+
+.sub-menu:hover {
+    background-color: darkorange;
+}
+
+.sub-menu>a {
+    padding: 5px 10px;
+    display: block;
+}
+
+.slide-sec {
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide-wrap {
+    display: flex;
+}
+
+.contents-sec {
+    display: flex;
+}
+
+.contents-sec>div {
+    width: 400px;
+    height: 200px;
+}
+
+.notice-wrap {
+    /* background-color: aqua; */
+    padding: 15px;
+}
+
+.notice-list li a {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px;
+    margin-top: 5px;
+}
+
+.gallery-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.gallery-wrap {
+    padding: 15px;
+}
+
+.banner-wrap {
+    position: relative;
+}
+
+.banner-wrap a {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px 10px;
+    background-color: greenyellow;
+    font-size: 18px;
+}
+
+.footer {
+    display: flex;
+    background-color: #333;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.family-site {
+    gap: 5%;
+}
+
+.popup {
+    position: fixed;
+    width: 400px;
+    padding: 20px;
+    border: 1px solid black;
+    background-color: white;
+    z-index: 10;
+    left: 35%;
+    top: 40%;
+    display: none;
+}
+
+.close-btn {
+    padding: 5px 20px;
+}
