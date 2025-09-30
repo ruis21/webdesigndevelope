@@ -1,0 +1,300 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    background-color: #fff;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.wrap {
+    width: 100%;
+    height: 100vh;
+}
+
+.top {
+    width: 100%;
+    height: calc(100vh - 120px);
+    display: flex;
+}
+
+.header {
+    width: 200px;
+    height: 100%;
+    background-color: #6347FF;
+    padding: 40px 0;
+}
+
+.logo a {
+    display: block;
+    width: 100%;
+    height: 40px;
+}
+
+.menu-list {
+    width: 180px;
+    margin: 30px auto 0;
+    background-color: bisque;
+}
+
+.menu>a {
+    display: block;
+    width: 100%;
+    padding: 8px 10px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.menu:hover>a {
+    background-color: #E66256;
+}
+
+.menu {
+    position: relative;
+}
+
+.sub-menu-list {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 180px;
+    background-color: rgba(0, 0, 0, 0.799);
+    color: #fff;
+    display: none;
+}
+
+.sub-menu>a {
+    display: block;
+    padding: 8px 10px;
+}
+
+.sub-menu:hover>a {
+    background-color: rgb(95, 194, 108);
+}
+
+
+.content-sec {
+    width: 400px;
+    height: 100%;
+}
+
+.banner {
+    display: flex;
+    background-color: #E66256;
+    padding: 20px 10px;
+    color: #fff;
+    gap: 10px;
+    align-items: center;
+}
+
+.banner-img img {
+    width: 120px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.banner-txt h2 {
+    font-size: 18px;
+}
+
+.banner-txt p {
+    font-size: 14px;
+}
+
+.banner-arrow img {
+    width: 40px;
+}
+
+.notice-sec,
+.gallery-sec {
+    padding: 10px;
+}
+
+.notice-sec h2,
+.gallery-sec h2 {
+    font-size: 18px;
+    background-color: #6347FF;
+    color: #fff;
+    width: 120px;
+    text-align: center;
+}
+
+.notice-list,
+.gallery-list {
+    border: 1px solid #6347FF;
+}
+
+.notice-list li a {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.gallery-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-list li a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.gallery-list li a img {
+    width: 160px;
+}
+
+.direct-list {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.direct-list a {
+    display: block;
+    text-align: center;
+}
+
+
+
+.slide-sec {
+    width: calc(100% - 600px);
+    height: 100%;
+    background-color: bisque;
+    overflow: hidden;
+}
+
+.slide-wrap {
+    display: flex;
+    width: 300%;
+}
+
+.slide {
+    display: block;
+    width: calc(100% / 3);
+    height: calc(100vh - 120px);
+    position: relative;
+}
+
+.slide01 {
+    background-image: url("../image/img1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide02 {
+    background-image: url("../image/img2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide03 {
+    background-image: url("../image/img3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide-txt {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer {
+    width: 100%;
+    height: 120px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.footer-logo {
+    width: 200px;
+}
+
+.family-site {
+    width: 200px;
+}
+
+.footer-contents {
+    width: calc(100% - 400px);
+    padding-left: 20px;
+}
+
+.footer-menu {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.footer-menu li a {
+    display: block;
+    border-right: 1px solid #fff;
+    padding-right: 15px;
+}
+
+.footer-menu li:last-child a {
+    border-right: 0;
+}
+
+.popup-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    display: none;
+}
+
+.popup {
+    width: 450px;
+    padding: 20px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popup p {
+    margin: 10px 0;
+}
+
+.close-btn {
+    padding: 7px 10px;
+    float: right;
+}
