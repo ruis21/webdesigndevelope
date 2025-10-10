@@ -121,7 +121,7 @@ a {
     display: none;
 }
 
-.gallary-list {
+.gallary-list { 
     display: flex;
     justify-content: space-around;
 }
