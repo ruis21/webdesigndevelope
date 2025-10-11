@@ -1,0 +1,99 @@
+$(function(){
+    // 메뉴 슬라이드 다운 (서브메뉴 전체 다운)
+    $(".menu>a").on("mouseenter", function(){
+        $(".sub-menu-list").stop().slideDown();
+    });
+
+    $(".menu-list").on("mouseleave", function(){
+        $(".sub-menu-list").stop().slideUp();
+    });
+
+
+    // 메뉴 슬라이드 다운 (해당 서브메뉴만 다운) : find와 children 두가지 방법이 있는데 직계 바로아래만 찾는게 children이라 find사용함
+    $(".menu").on("mouseleave", function () {
+        $(this).find(".sub-menu-list").stop().slideUp(500);
+    });
+
+    $(".menu").on("mouseenter", function(){
+        $(this).find(".sub-menu-list").stop
+    })
+
+    // 메뉴 슬라이드 페이드인,아웃 + 배경색 함께
+    $(".menu").on("mouseenter", function () {
+        $(".sub-menu-list").stop().fadeIn();
+        $(".sub-menu-list").css("display", "flex");
+        $(".menu-bg").stop().fadeIn();
+    });
+    $(".menu").on("mouseleave", function () {
+        $(".sub-menu-list").stop().fadeOut();
+        $(".menu-bg").stop().fadeOut();
+    });
+
+    // 이렇게 함께 쓰는것도 가능함. 
+     $(".sub-menu-list, .menu-bg").stop().slideDown();
+
+
+// -----------------------------------------------------
+
+    // 슬라이드 위아래로 이동 : 슬라이드를 먼저 위로 올리고 첫번째 슬라이드를 appendto 한다음 마진탑을 다시 0으로 만들기
+    setInterval(function(){
+        $(".slide-wrap").animate({"margin-top" : "-300px"}, function(){
+            $("slide:first").appendTo(".slide-wrap");
+            $(".slide-wrap").css("margin-top","0");
+        });
+    },3000);
+
+
+    // 슬라이드 좌우로 이동 : 슬라이드 전체를 우선 왼쪽으로 밀고, 첫번째 슬라이드를 appendTo한다음 margin-left를 다시 0으로 만들기.
+    setInterval(function(){
+        $(".slide-wrap").animate("margin-left":"-1200px"), function(){
+            $(".slide:first").appendTo(".slide-wrap");
+            $(".slide-wrap").css("margin-left","0")
+        }
+    });
+
+
+    // 슬라이드 페이드아웃 페이드인
+    let i = 0;
+    setInterval(function () {
+        if (i < 2) {
+            i++;
+        } else {
+            i = 0;
+        }
+        $(".slide").fadeOut();
+        $(".slide").eq(i).fadeIn();
+    }, 3000);
+
+
+    // 슬라이드 너비가 100%이고 일정 width만큼 제외할때 하는 법. 이미지를 밀때 이미지의 갯수만큼 너비를 곱해야 함.
+    let w = $(window).width() - 600;
+    let i = 0;
+    setInterval(function () {
+        if (i < 2) {
+            i++;
+        } else {
+            i = 0;
+        }
+        $(".slide-wrap").animate({ "margin-left": -w * i });
+    }, 3000);
+
+
+// -----------------------------------------------------
+    
+
+    // 공지사항/갤러리 탭메뉴 : let함수로 idx=index를 선언. on클래스를 삭제하고 추가함. tab-contents를 hide했다가 eq(idx)에 show하게 설정.
+
+    $(".tab-menu li").on("click", function () {
+        let idx = $(this).index();
+
+        $(".tab-menu li").removeClass("on");
+        $(this).addClass("on");
+
+        $(".tab-contents > div").hide();
+        $(".tab-contents > div").eq(idx).show();
+
+    });
+    
+});
+
