@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.top {
+    width: 100%;
+    height: 650px;
+    background-color: aquamarine;
+    display: flex;
+}
+
+.header {
+    width: 200px;
+    height: 100%;
+    background-color: blue;
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+}
+
+
+.main-contents {
+    width: calc(100% - 200px);
+    height: 100%;
+    background-color: #333;
+}
+
+.top-contents {
+    width: 100%;
+    height: 400px;
+    display: flex;
+}
+
+.slide-sec {
+    width: calc(100% - 230px);
+    height: 100%;
+    background-color: aliceblue;
+    overflow: hidden;
+}
+
+.slide-wrap {
+    width: 300%;
+    height: 100%;
+    display: flex;
+}
+
+.slide {
+    display: block;
+    width: calc(100% / 3);
+    height: 100%;
+    position: relative;
+}
+
+.slide01 {
+    background-image: url("../image/img1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide02 {
+    background-image: url("../image/img2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide03 {
+    background-image: url("../image/img3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide-txt {
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(17, 17, 17, 0.774);
+    padding: 20px 35px;
+}
+
+.banner-sec {
+    width: 230px;
+    height: 100%;
+    background-color: aqua;
+}
+
+.bottom-contents {
+    width: 100%;
+    height: 250px;
+    display: flex;
+}
+
+.bottom-contents>div {
+    width: 50%;
+}
+
+.notice-sec {
+    background-color: blueviolet;
+}
+
+.gallery-sec {
+    background-color: brown;
+}
