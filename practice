@@ -48,7 +48,7 @@ $(function(){
     setInterval(function(){
         $(".slide-wrap").animate("margin-left":"-1200px"), function(){
             $(".slide:first").appendTo(".slide-wrap");
-            $(".slide-wrap").css("margin-left","0")
+            $(".slide-wrap").css("margin-left","0");
         }
     });
 
