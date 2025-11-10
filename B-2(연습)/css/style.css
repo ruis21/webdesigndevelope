@@ -34,13 +34,48 @@ button {
     justify-content: space-between;
     align-items: center;
     /* background-color:; */
-    height: 100px;
+    height: 200px;
 }
 
 .logo {
-    height: 100px;
+    height: 150px;
+}
+
+.menu-list {
+    display: flex;
+    background-color: #333;
+    color: white;
+    text-align: center;
 }
 
 .menu {
-    width: 800px;
+    width: 200px;
+    position: relative;
+}
+
+.menu:hover {
+    background-color: rgb(9, 165, 48);
+}
+
+.menu>a {
+    display: block;
+    padding: 10px 20px;
+}
+
+
+.sub-menu-list {
+    display: none;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    background-color: #333;
+}
+
+.sub-menu>a {
+    display: block;
+    padding: 10px 20px;
+}
+
+.sub-menu>a:hover {
+    background-color: blue;
 }
