@@ -41,17 +41,20 @@ button {
     display: flex;
     align-items: center;
     height: 100px;
-    /* 수정: 헤더 높이 100px */
     position: fixed;
-    /* 상단에 고정하려면 유지, 고정 원치 않으면 제거 */
     top: 0;
     left: 0;
     right: 0;
+    /* margin: 0 auto; */
+
     z-index: 10;
     background-color: #fff;
     /* 고정 시 배경 덮음 */
 }
 
+.header-container {
+    position: relative;
+}
 
 .logo>a {
     display: block;
@@ -70,6 +73,7 @@ button {
 .menu-list {
     display: flex;
     background-color: #333;
+    /* opacity: 0.8; */
     color: white;
     text-align: center;
 }
@@ -95,6 +99,7 @@ button {
     text-align: center;
     width: 100%;
     background-color: #333;
+    z-index: 10;
 }
 
 .sub-menu>a {
@@ -104,4 +109,171 @@ button {
 
 .sub-menu>a:hover {
     background-color: blue;
+}
+
+.menu-bg {
+    background-color: #333;
+    position: absolute;
+    top: 40px;
+    height: 160px;
+    width: 100%;
+    z-index: 0;
+    /* opacity: 0.8; */
+    display: none;
+    ;
+}
+
+.slide-sec {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    ;
+}
+
+.slide-wrap {
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    background-image: url(../image/img1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    ;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.slide-img01 {
+    background-image: url("../image/img1.png");
+
+}
+
+.slide-img02 {
+    background-image: url("../image/img2.png");
+
+}
+
+.slide-img03 {
+    background-image: url("../image/img3.png");
+}
+
+.slide>p {
+    font-size: 32px;
+    font-weight: 600;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    width: 800px;
+    text-align: center;
+    position: absolute;
+    top: 70%;
+    left: 30%;
+}
+
+.contents-sec {
+    width: 100%;
+    display: flex;
+    gap: 2%;
+    ;
+}
+
+.notice-wrap {
+    width: 32%;
+    height: 200px;
+    background-color: bisque;
+}
+
+.notice-wrap h2 {
+    padding-top: 20px;
+}
+
+.notice-wrap ul>li>a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+
+}
+
+.gallery-wrap {
+    width: 32%;
+}
+
+.gallery-wrap h2 {
+    padding-top: 20px;
+    padding-left: 20px;
+    ;
+}
+
+.gallery-img-wrap {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+
+}
+
+.gallery-img img {
+    width: 100px;
+}
+
+.direct-wrap {
+    width: 32%;
+    position: relative;
+}
+
+.direct-img {
+    background-image: url(../image/direct.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+}
+
+.direct-wrap a {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    padding: 10px 15px;
+    color: white;
+    ;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    background-color: #333;
+    color: white;
+    padding: 0 20px;
+}
+
+.sns ul {
+    display: flex;
+    gap: 10px;
+}
+
+.popup {
+    position: fixed;
+    top: 30%;
+    left: 30%;
+    border: 1px solid #333;
+    background-color: white;
+    padding: 40px 36px;
+    line-height: 1.5;
+    width: 600px;
+    display: none;
+    ;
+}
+
+.close-btn {
+    padding: 5px 10px;
+    font-size: 16px;
 }
