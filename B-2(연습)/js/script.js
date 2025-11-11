@@ -9,7 +9,7 @@ $(".menu").on("mouseleave", function () {
 
 setInterval(function () {
     $(".slide-wrap").animate({ "margin-top": "-300px" }, function () {
-        $(".slide:first").appentTo(".slide-wrap")
+        $(".slide").appentTo(".slide-wrap")
         $(".slide-wrap").css("margin-top", "0");
     });
 }, 3000);
