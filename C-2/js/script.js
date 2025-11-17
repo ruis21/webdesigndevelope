@@ -35,7 +35,6 @@ $(function () {
     });
     $(".close-btn").on("click", function () {
         $(".popup-wrap").hide();
-
     });
 
 });
