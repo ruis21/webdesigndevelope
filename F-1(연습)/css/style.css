@@ -25,6 +25,7 @@ a {
 .container {
     width: 1340px;
     margin: 0 auto;
+    position: relative;
 }
 
 header {
@@ -88,7 +89,8 @@ nav {
 
 
 main {
-    position: relative;
+    /* position: relative; */
+    width: 100%;
 }
 
 .slide-sec {
@@ -147,14 +149,16 @@ main {
     left: 20%;
 }
 
+
+
 .main-conts {
     width: 100%;
     position: absolute;
     left: 50%;
-    top: 115%;
+    top: 110px;
     transform: translate(-50%, -50%);
     background-color: #eee;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 
 .direct-sec {
@@ -198,7 +202,7 @@ main {
 }
 
 
-.main-conts {
+.contents-wrap {
     width: 50%;
     /* background-color: aqua; */
     height: 200px;
@@ -260,7 +264,7 @@ footer {
     align-items: center;
     gap: 20px;
     position: absolute;
-    bottom: 0;
+    bottom: -450px;
 }
 
 .footer-left a {
