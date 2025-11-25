@@ -13,4 +13,13 @@ $(function () {
             $(".slide-wrap").css("margin-left", "0");
         })
     }, 3000);
+
+    $(".tab-menu li").on("click", function () {
+        let idx = $(this).index();
+        $("tab-menu li").removeClass("on");
+        $(this).addClass("on");
+
+        $(".tab-conts > ul").hide();
+        $(".tab-conts > ul").eq(idx).show();
+    })
 });
