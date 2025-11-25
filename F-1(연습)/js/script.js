@@ -24,8 +24,14 @@ $(function () {
 
         let idx = $(this).index();
         $(".tab-conts > ul").hide();
-        $(".tab-conts > ul").eq(i).show();
+        $(".tab-conts > ul").eq(idx).show();
+    });
 
-        return false;
+    $(".notice-list:first").on("click", function () {
+        $(".popup").show();
+
+    });
+    $(".close-btn").on("click", function () {
+        $(".popup").hide();
     });
 });

@@ -215,18 +215,25 @@ main {
     /* padding: 10px; */
 }
 
+
 .tab-menu a {
-    display: block;
+    /* display: block; */
     padding: 5px 10px;
     background-color: bisque;
 }
 
-.tab-menu:active a {
-    background-color: aquamarine;
+.tab-menu li.on {
+    background-color: rgb(76, 34, 228);
+    font-weight: 600;
 }
+
+/* .tab-menu:active a {
+    background-color: aquamarine;
+} */
 
 .tab-conts {
     background-color: #e4e4e4;
+    padding-top: 10px;
 }
 
 .notice-list {
@@ -241,10 +248,14 @@ main {
     justify-content: space-between;
 }
 
+.gallery-list {
+    display: flex;
+}
+
 .gallery-list li {
     display: flex;
     gap: 10px;
-    display: none;
+    /* display: none; */
 }
 
 .gallery-list img {
@@ -282,4 +293,22 @@ footer {
     flex-direction: column;
     gap: 20px;
     padding-right: 20px;
+}
+
+.popup {
+    width: 500px;
+    height: 300px;
+    padding: 50px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 10px;
+    border: 1px solid #333;
+    top: 30%;
+    left: 40%;
+    display: none;
+}
+
+.close-btn {
+    padding: 5px 10px;
+    font-size: 16px;
 }
