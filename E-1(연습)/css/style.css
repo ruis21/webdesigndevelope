@@ -31,7 +31,6 @@ a {
     display: flex;
     height: calc(100vh - 120px);
     width: 100%;
-    background-color: aquamarine;
 }
 
 header {
@@ -61,13 +60,12 @@ header {
     color: #fff;
 }
 
-.menu>a:hover {
+.menu:hover>a {
     background-color: #f43813;
 }
 
 .sub-menu-list {
     display: none;
-    ;
 }
 
 .sub-menu a {
@@ -76,7 +74,7 @@ header {
     font-size: 16px;
 }
 
-.sub-menu>a:hover {
+.sub-menu:hover a {
     background-color: #eed370;
 }
 
@@ -88,24 +86,29 @@ header {
     background-color: lightgray;
 }
 
-.contents-wrap {
+.conts-wrap {
+    display: flex;
+}
+
+.main-conts {
     width: 400px;
     height: calc(100vh - 120px);
-    /* background-color: aqua; */
+    /* background-color: rgb(255, 241, 229); */
     display: flex;
     flex-direction: column;
 }
 
 .banner-sec {
     width: 100%;
-    height: 150px;
+    height: 200px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .banner-img {
     width: 100px;
-    height: 150px;
+    height: 200px;
     object-fit: cover;
 }
 
@@ -124,10 +127,15 @@ header {
     width: 100%;
     padding: 10px;
     background-color: #f3f3f3;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .notice-sec h3 {
     color: #f43813;
+    padding: 10px;
 }
 
 .notice-list a {
@@ -139,9 +147,13 @@ header {
 
 .gallery-sec {
     width: 100%;
-    height: 200px;
+    height: 220px;
     padding: 10px;
-    /* background-color: #b6a9a9; */
+    background-color: #dacfcf;
+}
+
+.gallery-sec h3 {
+    padding: 10px;
 }
 
 .gallery-list {
@@ -160,7 +172,10 @@ header {
 .direct-sec {
     width: 100%;
     background-color: #f3f3f3;
-    height: 150px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .direct-list {
@@ -170,57 +185,93 @@ header {
     text-align: center;
 }
 
-.slide-wrap {
-    display: flex;
-    width: 100%;
+.slide-sec {
+    width: calc(100vw - 200px - 400px);
+    height: 100%;
+    background-color: #d17c6a;
+    overflow: hidden;
 }
 
-.slide-sec {
-    width: calc(100% - 200px - 400px);
-    height: calc (100vh - 120px);
-    /* overflow: hidden; */
+.slide-wrap {
+    display: flex;
+    width: 300%;
+    height: 100%;
     /* background-color: #796416; */
 }
 
-.slide-sec h2 {
+
+.slide a {
+    display: block;
     padding: 20px;
     background-color: #000000;
     color: #fff;
-    position: absolute;
-    top: 80%;
-    left: 40px;
+    font-size: 26px;
+    text-align: center;
 }
 
 .slide {
-    display: block;
-    /* width: calc(100% / 3); */
-    /* height: calc(100vh - 120px); */
-    position: relative;
-    overflow: hidden;
-    ;
-}
-
-.slide01 {
+    /* position: relative; */
+    width: calc(100% / 3);
+    height: 100%;
+    /* display: block; */
     background-image: url("../images/img1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+.slide01 {
+    background-image: url("../images/img1.jpg");
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
 .slide02 {
     background-image: url("../images/img2.png");
-    background-position: center;
+    /* background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
     /* display: none; */
 }
 
 .slide03 {
     background-image: url("../images/img3.png");
-    background-position: center;
+    /* background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
     /* display: none; */
+}
+
+.popup-wrap {
+    width: 100%;
+    height: 100%;
+    background-color: #0505056b;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.popup {
+    background-color: #fff;
+    width: 500px;
+    height: 300px;
+    padding: 50px;
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    border-radius: 10px;
+}
+
+.popup p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    font-size: 16px;
+    padding: 8px 12px;
 }
 
 footer {

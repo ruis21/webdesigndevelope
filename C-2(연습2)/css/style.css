@@ -1,0 +1,258 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    background-color: #fff;
+}
+
+cursor {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol,
+li {
+    list-style-type: none;
+}
+
+.container {
+    width: 1000px;
+    display: flex;
+}
+
+header {
+    width: 200px;
+    height: 650px;
+    background-color: #fff8bd
+}
+
+.logo>a {
+    display: block;
+    padding: 20px 0;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.menu>a {
+    display: block;
+    padding: 8px 15px;
+    background-color: rgb(255, 184, 78);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.menu:hover>a {
+    background-color: rgb(53, 53, 53);
+    color: #fff;
+}
+
+.sub-menu>a {
+    display: block;
+    padding: 8px 15px;
+    background-color: rgb(248, 241, 235);
+}
+
+.sub-menu:hover a {
+    background-color: rgb(235, 160, 68);
+}
+
+.sub-menu-list {
+    display: none;
+}
+
+.contents-wrap {
+    width: 800px;
+    height: 650px;
+    /* background-color: aqua; */
+}
+
+.slide-sec {
+    width: 100%;
+    height: 350px;
+    background-color: aliceblue;
+    position: relative;
+}
+
+
+.slide {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/img1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+.slide01 {
+    background-image: url("../images/img1.png");
+}
+
+.slide02 {
+    background-image: url("../images/img2.png");
+    display: none;
+}
+
+.slide03 {
+    background-image: url("../images/img3.png");
+    display: none;
+}
+
+.slide a {
+    position: absolute;
+    padding: 20px 30px;
+    background-color: rgba(0, 0, 0, 0.699);
+    color: #fff;
+    font-size: 28px;
+    opacity: 0.9;
+    bottom: 10%;
+    left: 5%;
+}
+
+.main-contents {
+    display: flex;
+}
+
+.notice-sec {
+    width: 400px;
+    height: 200px;
+    background-color: rgb(253, 244, 230);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.notice-sec>a {
+    display: block;
+    padding: 8px 10px;
+    color: chocolate;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.notice-list a {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+
+.gallery-sec {
+    padding: 0 5px;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(229, 253, 206);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gallery-sec>a {
+    color: rgb(9, 139, 26);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.gallery-list {
+    display: flex;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.gallery-list img {
+    width: 60px;
+    object-fit: cover;
+    height: 100px;
+}
+
+.direct-sec {
+    width: 200px;
+    height: 200px;
+    /* background-color: chocolate; */
+    background-image: url("../images/direct.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.direct-sec a {
+    width: 80px;
+    display: block;
+    padding: 8px 10px;
+    text-align: center;
+    color: #fff;
+    background-color: #333;
+    top: 50%;
+    left: 50%;
+    transform: translate(80%, 250%);
+
+}
+
+
+.popup {
+    width: 500px;
+    height: 300px;
+    border: 1px solid #333;
+    padding: 50px;
+    /* display: none; */
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.popup p {
+    margin-top: 10px;
+}
+
+.popup-wrap {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.411);
+}
+
+.close-btn {
+    display: block;
+    padding: 5px 8px;
+    font-size: 16px;
+    float: right;
+    border: none;
+    border-radius: 10px;
+}
+
+
+footer {
+    height: 100px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.sns {
+    display: flex;
+    gap: 5px;
+}
