@@ -1,0 +1,293 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    background-color: #fff;
+}
+
+ul,
+ol,
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+cursor {
+    cursor: pointer;
+}
+
+.container {
+    width: 1340px;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+.logo {
+    display: block;
+    padding: 10px;
+}
+
+nav {
+    position: relative;
+}
+
+.menu-list {
+    position: absolute;
+    top: 1px;
+    left: -800px;
+    width: 800px;
+    display: flex;
+    text-align: center;
+    color: #fff;
+}
+
+.menu>a {
+    display: block;
+    padding: 15px 30px;
+    background-color: #e31a40;
+    color: #fff;
+}
+
+.menu {
+    width: 100%;
+}
+
+.menu:hover>a {
+    background-color: rgb(24, 24, 24);
+}
+
+.sub-menu-list {
+    position: relative;
+    z-index: 5;
+    display: none;
+    width: 100%;
+}
+
+.sub-menu>a {
+    display: block;
+    padding: 15px 30px;
+    background-color: rgb(34, 34, 34);
+}
+
+.sub-menu:hover>a {
+    background-color: #ec637c;
+}
+
+.menu-bg {
+    width: 100%;
+    height: 200px;
+    background-color: rgb(34, 34, 34);
+    z-index: 0;
+    top: 100px;
+    left: -2;
+    position: fixed;
+    display: none;
+}
+
+.slide-sec {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.slide-wrap {
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    background-image: url("/img/img1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    position: relative;
+}
+
+.slide01 {
+    background-image: url("/img/img1.png");
+}
+
+.slide02 {
+    background-image: url("/img/img2.png");
+}
+
+.slide03 {
+    background-image: url("/img/img3.png");
+}
+
+.slide a {
+    color: #fff;
+    font-size: 24px;
+    background-color: #000000c2;
+    padding: 30px;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+}
+
+.contents-wrap {
+    position: relative;
+    top: -120px;
+}
+
+.direct-sec {
+    width: 100%;
+    height: 120px;
+    background-color: #facfd6;
+    padding: 20px;
+}
+
+.direct-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.direct-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.banner-sec a {
+    width: 100%;
+    height: 250px;
+    background-color: #8a8989;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.banner-img {
+    width: 250px;
+    padding: 10px;
+    object-fit: cover;
+}
+
+.banner-txt {
+    color: #fff;
+}
+
+.arrow-img {
+    width: 100px;
+}
+
+.main-conts {
+    width: 100%;
+    height: 250px;
+    background-color: #dadada;
+    display: flex;
+}
+
+.notice-sec {
+    width: 50%;
+    padding: 50px 20px;
+}
+
+.notice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.notice-list a {
+    display: flex;
+    justify-content: space-between;
+}
+
+.notice-sec h3 {
+    padding: 15px 0;
+    color: #e31a40;
+}
+
+.gallery-sec {
+    width: 50%;
+    padding: 20px;
+}
+
+.gallery-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.gallery-list img {
+    width: 180px;
+    object-fit: cover;
+    height: 120px;
+}
+
+.gallery-list p {
+    text-align: center;
+}
+
+.gallery-sec h3 {
+    padding: 15px 0;
+    color: #e31a40;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 20px;
+}
+
+footer a {
+    display: block;
+
+}
+
+.popup-wrap {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #00000091;
+    display: none;
+}
+
+.popup {
+    width: 500px;
+    height: 300px;
+    padding: 50px;
+    background-color: #fff;
+    top: 30%;
+    left: 40%;
+    position: absolute;
+}
+
+.close-btn {
+    display: block;
+    float: right;
+    padding: 8px 12px;
+}
