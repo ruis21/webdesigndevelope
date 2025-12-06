@@ -1,20 +1,10 @@
 $(function () {
-    $(".menu>a").on("mouseenter", function () {
+    $(".menu").on("mouseenter", function () {
         $(".sub-menu-list").stop().slideDown(500);
     });
-    $(".menu>a").on("mouseleave", function () {
+    $(".menu").on("mouseleave", function () {
         $(".sub-menu-list").stop().slideUp(500);
     });
-
-    $(".tab-menu").on("click", function () {
-        let idx = $(this).index();
-        $("tab-menu li").removeClass("on");
-        $(this).addClass("on");
-
-        $(".tab-conts > ul").hide();
-        $(".tab-conts > ul").eq(idx).show();
-
-    })
 
 
     setInterval(function () {
@@ -25,11 +15,12 @@ $(function () {
     }, 3000);
 
     $(".tab-menu li").on("click", function () {
+        // e.preventDefault();
         let idx = $(this).index();
-        $("tab-menu li").removeClass("on");
+        $(".tab-menu li").removeClass("on");
         $(this).addClass("on");
 
         $(".tab-conts > div").hide();
-        $(this).eq(idx).show();
+        $(".tab-conts > div").eq(idx).show();
     })
 });

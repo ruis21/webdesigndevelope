@@ -201,6 +201,9 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .banner-sec>a {
@@ -208,8 +211,20 @@ nav {
     padding: 8px 12px;
     background-color: #333;
     color: white;
-    position: fixed;
-    top: 53%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+}
+
+.direct-sec {
+    width: 400px;
+    height: 100%;
+    background-image: url("/images/direct.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.direct-sec>a {
+    display: block;
+    padding: 8px 12px;
+    background-color: #333;
+    color: white;
 }
